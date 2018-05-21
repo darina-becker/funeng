@@ -9,7 +9,7 @@
 if (isset($_COOKIE['login']) && isset($_COOKIE['session_hash'])){
     $login_from_cookie = $_COOKIE['login'];
     $session_hash_from_cookie = $_COOKIE['session_hash'];
-    $connection = mysqli_connect("localhost", "admin", "admin", "funeng", "3306");
+    $connection = mysqli_connect("us-cdbr-iron-east-04.cleardb.net", "baee442aa8b79c", "f33121f7", "heroku_f76f1b2818ac133", "3306");
     $log_out = "UPDATE `users` SET session_hash = null WHERE login = '" . $login_from_cookie . "'";
 
     if ($result = mysqli_query($connection, $log_out)) {
