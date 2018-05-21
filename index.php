@@ -91,7 +91,7 @@ include 'check_current_session.php';
                     <input id="log_signUp" name="login" type="text" class="input-field">
 
                     <label for="email_signUp">email</label>
-                    <input id="email_signUp"  name="email" type="text" class="input-field" >
+                    <input id="email_signUp"  name="email" type="email" class="input-field" >
 
 
                     <label for="pass_signUp"> Password </label>
