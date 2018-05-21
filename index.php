@@ -70,7 +70,7 @@ include 'check_current_session.php';
                         Password
                         <a class="label-link" href="/password_reset">Forgot password?</a>
                     </label>
-                    <input id="password_field" class="input-field" name="password" type="password" placeholder="Enter Password">
+                    <input id="password_field" class="input-field" name="password" type="password" placeholder="Enter Password" autocomplete="off">
                     <input name="commit" onclick="sign_in()" class="btn-block" value="Sign in" data-disable-with="Singing in..." type="button">
             </form>
             </div>
@@ -98,7 +98,7 @@ include 'check_current_session.php';
                     <input id="pass_signUp" name="pass" type="password" class="input-field"  >
 
                     <label for="reenterpass"> Repeat password</label>
-                    <input id="reenterpass" name="repass" type="password" class="input-field" >
+                    <input id="reenterpass" name="repass" type="password" autocomplete="off" class="input-field" >
 
                     <input name="commit_signUp" onclick="sign_up()" type="button" value="Sign up" data-disable-with="Singing in..."  class="btn-block" >
                 </form>
