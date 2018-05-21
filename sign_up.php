@@ -57,7 +57,13 @@ $email = $_POST["email"];
 
 $hash = password_hash($password, PASSWORD_BCRYPT);
 
-$connection = mysqli_connect("localhost", "admin", "admin", "funeng", "3306");
+$url=parse_url(getenv("CLEARDB_DATABASE_URL"));
+$server = $url["us-cdbr-iron-east-04.cleardb.net"];
+$username = $url["baee442aa8b79c"];
+$password = $url["f33121f7"];
+$db = "heroku_f76f1b2818ac133"
+
+$connection = mysqli_connect($server, $username, $password, $db, "3306");
 if (!$connection) {
     echo "Ошибка БД";
     exit;
