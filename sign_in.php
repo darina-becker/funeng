@@ -11,7 +11,7 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
     $password = $_POST['password'];
     $hash = "";
 
-    if(!!preg_match("/^[a-zA-Z0-9]+$/", $login)) {
+    if(!preg_match("/^[a-zA-Z0-9]+$/", $login)) {
         echo "Неверный логин или пароль 4";
         exit;
     }

@@ -53,7 +53,7 @@ $password = $_POST["password"];
 $login = $_POST["username"];
 $email = $_POST["email"];
 
-if(!!preg_match("/^[a-zA-Z0-9]+$/", $login)) {
+if(!preg_match("/^[a-zA-Z0-9]+$/", $login)) {
     echo "Логин может состоять только из букв английского алфавита и цифр";
     exit;
 }
