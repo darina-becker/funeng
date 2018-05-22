@@ -16,7 +16,7 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
         exit;
     }
 
-    $connection = mysqli_connect("us-cdbr-iron-east-04.cleardb.net", "baee442aa8b79c", "f33121f7", "heroku_f76f1b2818ac133", "3306");
+    include "db.php";
     $login_query = "SELECT hash_pswd FROM `users` WHERE login = '" . $login . "'";
 
     if ($result = mysqli_query($connection, $login_query)) {

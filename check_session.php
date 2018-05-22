@@ -10,7 +10,7 @@ if(isset($_COOKIE['login']) && isset($_COOKIE['session_hash'])) {
     //todo
     $login_from_cookie = $_COOKIE['login'];
     $hash_from_cookie = $_COOKIE['session_hash'];
-    $connection = mysqli_connect("us-cdbr-iron-east-04.cleardb.net", "baee442aa8b79c", "f33121f7", "heroku_f76f1b2818ac133", "3306");
+    include "db.php";
 
     $session_hash_query = "SELECT session_hash FROM `users` WHERE login = '" . $login_from_cookie . "'";
 
