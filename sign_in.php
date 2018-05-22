@@ -10,6 +10,12 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
     $login = $_POST['username'];
     $password = $_POST['password'];
     $hash = "";
+
+    if(!!preg_match("/^[a-zA-Z0-9]+$/", $login)) {
+        echo "Неверный логин или пароль 4";
+        exit;
+    }
+
     $connection = mysqli_connect("us-cdbr-iron-east-04.cleardb.net", "baee442aa8b79c", "f33121f7", "heroku_f76f1b2818ac133", "3306");
     $login_query = "SELECT hash_pswd FROM `users` WHERE login = '" . $login . "'";
 
