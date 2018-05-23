@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Cловарь</title>
+<title>CпїЅпїЅпїЅпїЅпїЅпїЅ</title>
 <style>html, body {
         font-family: sans-serif;
         -ms-text-size-adjust: 100%;
@@ -151,10 +151,10 @@
     }
     </style>
 </head>
-
-
-
 <body>
-<h2>Cловарь</h2>
+<?php
+    include '../../../navbar.php';
+?>
+<h2>CпїЅпїЅпїЅпїЅпїЅпїЅ</h2>
 </body>
 </html>

@@ -30,10 +30,7 @@ if(isset($_COOKIE['login']) && isset($_COOKIE['session_hash'])) {
 
     if ($hash != $hash_from_cookie)
     {
-//        echo "<script>window.location = '/main.php'</script>";
-//        exit;
         redirect('/');
-//        echo "OK";
     }
 
 } else {

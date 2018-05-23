@@ -1,5 +1,5 @@
 ﻿<?php
-include '../../check_session.php';
+include ($_SERVER['DOCUMENT_ROOT'].'/check_session.php');
 ?>
 
 <html>
@@ -165,6 +165,10 @@ include '../../check_session.php';
 <video width="560" height="315" controls="controls">
     <source src="video/i_have_a_pet.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 </video>
+
+<?php
+include( $_SERVER['DOCUMENT_ROOT'].'/footer.php');
+?>
 
 </body>
 </html>

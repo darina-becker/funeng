@@ -1,11 +1,11 @@
 ﻿<?php
-include '../../../check_session.php';
+include ($_SERVER['DOCUMENT_ROOT'].'/check_session.php');
 ?>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>   
-<link rel="stylesheet" href="../25/css/template.css" type="text/css" />
+<link rel="stylesheet" href="../../../css/main.css" type="text/css" />
 <title>Страница</title>
 <style>
 
@@ -60,7 +60,7 @@ include '../../../check_session.php';
 </head>
 
 <body>
-
+<div>
 <form method="post" action="test.php">
 	<div class="element">
 		<p><strong>I have a cat</strong> </p>
@@ -102,6 +102,10 @@ include '../../../check_session.php';
 		<br><input class = "element2" type="submit" value="Отправить ответы" />
 	</div>
 </form>
+</div>
+<?php
+include( $_SERVER['DOCUMENT_ROOT'].'/footer.php');
+?>
 </body>
 </html>
 
