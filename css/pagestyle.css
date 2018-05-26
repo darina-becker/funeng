@@ -1,7 +1,5 @@
 title{
-
     font-family: 'Caveat', cursive;
-
 }
 html, body {
     font-family: sans-serif;
@@ -13,50 +11,6 @@ html, body {
     -webkit-font-smoothing: antialiased;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #009966;
-    font-family: 'Caveat', cursive;
-
-}
-
-.message {
-    text-align: center;
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px 20px;
-    max-width: 710px;
-}
-
-.message__logo {
-    max-width: 200px;
-    max-height: 200px;
-    border: none;
-}
-
-.message__title {
-    font-size: 40px;
-    font-weight: 100;
-    margin-top: 15px;
-    color: #47494E;
-    margin-bottom: 8px;
-}
-
-.message__subtitle {
-    font-size: 23px;
-    font-weight: 100;
-    margin-top: 15px;
-    color: #47494E;
-    margin-bottom: 8px;
-}
-
 p {
     -webkit-margin-after: 0px;
     -webkit-margin-before: 0px;
@@ -64,21 +18,6 @@ p {
     color: #dddddd;
     line-height: 21px;
     margin-bottom: 4px;
-}
-
-.w600px {
-    max-width: 600px;
-}
-
-a, small {
-    -webkit-margin-after: 0px;
-    -webkit-margin-before: 0px;
-    font-size: 14px;
-    color: #7F828B;
-    line-height: 21px;
-    margin-bottom: 4px;
-    margin-top: 20px;
-    text-decoration: none;
 }
 
 a {
@@ -106,72 +45,6 @@ a {
     font-weight: 500;
     border: none;
 }
-
-.hk-logo, .app-icon {
-    /*
-            fill: #DBE1EC;
-    */
-    fill: #009966 ;
-}
-
-.info {
-    fill: #009966;
-}
-
-body.friendly {
-    background: -webkit-linear-gradient(-45deg, #b80303 0%, #000 100%);
-    background: linear-gradient(135deg, #b80303 0%, #000 100%);
-}
-
-body.friendly .message__title {
-    color: #009966;
-}
-
-body.friendly p {
-    /*
-            color: rgba(255, 255, 255, 0.6);
-
-    */
-    color: #009966;
-}
-
-body.friendly .hk-logo, body.friendly .app-icon {
-    /*
-            fill: rgba(255, 255, 255, 0.9);
-    */
-    fill: #009966;
-}
-
-body.friendly .info {
-    /*
-            fill: rgba(255, 255, 255, 0.9);
-    */
-    fill: #009966;
-}
-
-body.friendly .btn {
-    color: #009966;
-    /*
-            border: 1px solid rgba(255, 255, 255, 0.9);
-    */
-}
-
-.info_area {
-    position: fixed;
-    right: 12px;
-    bottom: 12px;
-}
-
-.logo {
-    position: fixed;
-    left: 12px;
-    bottom: 12px;
-}
-#footer {
-    display: none;
-}
-
-
 .readListen {
     display: inline-block;
     box-sizing: inherit;
@@ -194,8 +67,6 @@ body.friendly .btn {
     font-family: 'Caveat', cursive;
     padding: 5px 5px;
     margin-left: 10%;
-
-
 }
 
 .readListen:hover {
@@ -204,6 +75,7 @@ body.friendly .btn {
     border-radius:40px ;
 
 }
+
 .text{
     font-size: 20px;
 }
@@ -216,10 +88,4 @@ img.animate1 {
 img.animate1:hover {
     filter: alpha (Opacity=100);
     opacity: 1;
-}
-
-.cpr
-{
-    display: table-cell;
-    vertical-align: bottom;
 }
