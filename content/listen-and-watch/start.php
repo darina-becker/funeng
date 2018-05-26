@@ -5,27 +5,25 @@ include ($_SERVER['DOCUMENT_ROOT'].'/check_session.php');
 <html>
 <head>
 <title>Смотри</title>
-
     <link rel="stylesheet" href="../../css/pagestyle.css">
     <link href="https://fonts.googleapis.com/css?family=Bad+Script|Caveat|Indie+Flower|Lobster|Marck+Script&amp;subset=cyrillic" rel="stylesheet">
+
+
 </head>
 
 <body>
-
 <?php
-/*    include ($_SERVER["DOCUMENT_ROOT"].'/navbar.php');
-*/?>
-<h1>Смотри</h1>
-<div>
-
-
+include ($_SERVER["DOCUMENT_ROOT"].'/navbar2.php');
+?>
+<div class = contentText>
     <table>
       <colgroup >
         <col style="width: 300px;">
         <col style="width: 300px;">
         <col style="width: 300px;">
       </colgroup>
-      <tr>
+        <caption><h1>Смотри</h1></caption>
+        <tr>
         <td>
             <a href="i-have-a-pet.php"> <img class="animate1" src="img/i-have-a-pet.jpg" alt="" height="180"/> </a>
         </td>
@@ -43,8 +41,8 @@ include ($_SERVER['DOCUMENT_ROOT'].'/check_session.php');
         </tr>
     </table>
 </div>
-<?php include "../../to_homepage.php"; ?>
 
+<?php include "../../to_homepage.php"; ?>
 <?php
 include( $_SERVER['DOCUMENT_ROOT'].'/footer.php');
 ?>

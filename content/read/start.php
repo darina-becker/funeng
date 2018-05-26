@@ -11,38 +11,18 @@ include '../../check_session.php';
     <title>Читай</title>
 </head>
 
+<?php
+include ($_SERVER["DOCUMENT_ROOT"].'/navbar2.php');
+?>
 
-<body>
-<!--<div>
-    <nav class="navigation">
-        <div class="logo">
-            <img height="100" src="img/logo_on_bar.png" alt = "EnglishMen" class="logo"/>
-        </div>
-        <div>
-            <ul>
-                <?php /*if(isset($_GET["username"])){
-                    $user = $_GET["username"];
-                    echo "<li><a href='#'>" . $user . "</a></li>";
-                }*/?>
-                <li><a href="/content/read/start.php">Read</a></li>
-                <li><a href="#">Writing</a></li>
-                <li><a href="/content/listen-and-watch/start.php">Listening</a></li>
-                <li><a href ="#"> Выход </a></li>
-            </ul>
-        </div>
-
-    </nav>
-
-</div>-->
-
-
-<h1>Читай</h1>
+<div class = contentText>
 <table>
   <colgroup>
     <col>
     <col style="width: 500;">
   </colgroup>
-  <tr>
+    <caption><h1>Читай</h1></caption>
+    <tr>
     <td><img src="img/Giant.jpg" alt="" height="180" /></td>
     <td style="background-color: #009966">
 		<h2>Новый наряд великана</h2>
@@ -60,8 +40,8 @@ include '../../check_session.php';
   </tr>
 
 </table>
-<?php include "../../to_homepage.php"; ?>
-
+</div>
+    <?php include "../../to_homepage.php"; ?>
 <?php
 include( $_SERVER['DOCUMENT_ROOT'].'/footer.php');
 ?>

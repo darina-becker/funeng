@@ -13,12 +13,18 @@ include ($_SERVER['DOCUMENT_ROOT'].'/check_session.php');
 
 
 <body>
+<?php
+include ($_SERVER["DOCUMENT_ROOT"].'/navbar2.php');
+?>
+<div class="contentText">
 <h2>I Have A Pet</h2>
 
 <!--<iframe width="560" height="315" src="/video/i_have_a_pet.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
 <video width="560" height="315" controls="controls">
     <source src="video/i_have_a_pet.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 </video>
+</div>
+
 <?php include "../../to_homepage.php"; ?>
 
 <?php

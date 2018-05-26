@@ -10,6 +10,11 @@ include '../../check_session.php';
 </head>
 
 <body>
+<?php
+include ($_SERVER["DOCUMENT_ROOT"].'/navbar2.php');
+?>
+
+<div class="contentText">
 <h1 class="text2">Груффало</h1>
 <p class="text">
 Сказка Джулии Дональдсон об умном мышонке, который вымышленным чудовищем отпугнул своих обидчиков (лису, змею, сову).</p>
@@ -18,8 +23,10 @@ include '../../check_session.php';
 <p class="text">Веселые задания: <a href="books/Gruffalo_activity.pdf"> The Gruffalo - Activity book </a></p>
 <p class="text">Смотреть и слушать:</p>
 <iframe width="660" height="415"  src="https://www.youtube.com/embed/ThZqDoJi5S0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-<?php include "../../to_homepage.php"; ?>
 
+</div>
+
+<?php include "../../to_homepage.php"; ?>
 <?php
 include( $_SERVER['DOCUMENT_ROOT'].'/footer.php');
 ?>

@@ -3,7 +3,7 @@ title{
     font-family: 'Caveat', cursive;
 
 }
-html, body {
+/*html, body {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
 
@@ -12,14 +12,14 @@ html, body {
     height: 100%;
     -webkit-font-smoothing: antialiased;
 }
-
+*/
 body {
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/*    align-items: center;
+    justify-content: center;*/
     background-color: #009966;
     font-family: 'Caveat', cursive;
 
@@ -91,3 +91,171 @@ img.animate1:hover {
     opacity: 1;
 }
 
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+.gohome {
+    position: fixed;
+    left: 0;
+    bottom: 25;
+    width: 100%;
+    background-color: #009966;
+    color: white;
+    text-align: center;
+}
+
+/*------------------------------------------------------------*/
+
+.logo {
+    float: left;
+
+}
+.logo a{
+    all:initial;
+}
+.logo a:hover {
+    all: initial !important;
+    float: left;
+}
+
+.logo a:hover:after{
+    all: initial !important;
+    float: left;
+}
+
+.logo a:hover:before {
+    all:initial !important;
+    float: left;
+}
+/* Style the top navigation bar */
+.navigation {
+
+    background-color: #333;
+    position: fixed;
+    margin: 0 auto;
+    float: right;
+    width: 100%;
+    height: 100px;
+    z-index: 2;
+}
+.navigation a {
+    display: inline-block;
+    box-sizing: inherit;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 70px;
+    align-items: flex-start;
+    /*  border: 2px solid rgba(200, 255, 255, 0.5); */
+    font-size: 16px; /*размер букв в кнопке*/
+    color: #f2f2f2;
+    height: 80px; /*высота кнопки*/
+    width: 100%; /* размер кнопки относительно текста*/
+    text-align: center;
+    font-weight: 800; /*толщина букв*/
+    /*    margin-right: 70px;
+        margin-left: 70px;*/
+    position: relative;
+    overflow: hidden;
+    transition: .5s ease-in;
+    font-family: 'Caveat', cursive;
+    float: right;
+    padding: 10px 10px;
+}
+
+.navigation a:hover {
+    background-color: rgba(200, 255, 255, 0.35);
+    color: black;
+}
+
+.navigation a::before{
+    display: block;
+    position: absolute;
+    height: 5px;
+    width:0;
+    background-color:#009966;
+    left: 50%;
+    top:0;
+    content: '';
+    transition: all ease-in-out 250ms;
+    -moz-transition: all ease-in-out 250ms;
+}
+.navigation a::after{
+    display: block;
+    position:absolute;
+    content:'';
+    height:5px;
+    width:0;
+    background-color: #009966;
+    left:50%;
+    top:0;
+    transition: all ease-in-out 250ms;
+    -moz-transition: all ease-in 250ms;
+}
+
+.navigation a:hover::before{
+    width: 50%;
+    left: 0px;
+}
+.navigation a:hover::after{
+    width: 50%;
+}
+
+nav div ul li{
+    display: inline-block;
+    margin-left: 40px;
+    padding-top: px ;
+    position: relative;
+
+
+}
+nav div ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+}
+
+nav div ul li{
+    list-style: none;
+    /*
+    padding-left: 20%;
+    */
+    margin-left: 30px;
+}
+
+.contentText {
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo3{
+    padding-top: 20% ;
+    float: right;
+}
+
+.devis ul{
+    float: left;
+    font-size: 30px;
+    padding-left: 2%;
+    list-style: none;
+    padding-top: 13%;
+
+}
+
+.icons{
+    float: left;
+    padding-left: 10%;
+    list-style: none;
+    padding-top: 13%;
+}

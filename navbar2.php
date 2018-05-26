@@ -24,8 +24,6 @@
                 <li><a href="/content/listen-and-watch/start.php">Listening</a></li>
                 <li><a href ="/logout.php"> Выход </a></li>
             </ul>
-            <img width="250" src="img/logo3.png" alt = "EnglishMen" class="logo3"/>
-
         </div>
 
     </nav>
