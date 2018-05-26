@@ -107,6 +107,9 @@ include 'check_current_session.php';
         </div>
     </div>
 
+    <?php
+        include 'footer.php';
+    ?>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/sign_in.js"></script>
     <script type="text/javascript" src="js/sign_up.js"></script>

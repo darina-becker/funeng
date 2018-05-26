@@ -4,16 +4,11 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <head>
-        <meta charset="UTF-8" >
-        <title>Главная</title>
-        <link rel="stylesheet" href="css/main.css">
-        <link href="https://fonts.googleapis.com/css?family=Bad+Script|Caveat|Indie+Flower|Lobster|Marck+Script&amp;subset=cyrillic" rel="stylesheet">
-    </head>
-</head>
+<?php
+    include ($_SERVER['DOCUMENT_ROOT'].'/header.php');
+?>
 <body>
+<<<<<<< HEAD
 <div>
     <nav class="navigation">
         <div class="logo">
@@ -42,5 +37,14 @@
 <!--не видно его на странице почему-то-->
 <div class="contentText"><p><?php include "copyright.php"; ?></p></div>
 
+=======
+<?php
+    include ($_SERVER['DOCUMENT_ROOT'].'/navbar.php');
+?>
+
+<?php
+include( $_SERVER['DOCUMENT_ROOT'].'/footer.php');
+?>
+>>>>>>> 5b708f2e47aa8d5562c32776d7a90c1ecfbca146
 </body>
 </html>

@@ -53,12 +53,14 @@ $password = $_POST["password"];
 $login = $_POST["username"];
 $email = $_POST["email"];
 
-
+if(!preg_match("/^[a-zA-Z0-9]+$/", $login)) {
+    echo "Логин может состоять только из букв английского алфавита и цифр";
+    exit;
+}
 
 $hash = password_hash($password, PASSWORD_BCRYPT);
 
-
-$connection = mysqli_connect("us-cdbr-iron-east-04.cleardb.net", "baee442aa8b79c", "f33121f7", "heroku_f76f1b2818ac133", "3306");
+include "db.php";
 if (!$connection) {
     echo "Ошибка БД";
     exit;

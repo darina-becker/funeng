@@ -6,17 +6,17 @@
  * Time: 11:38
  */
 
-if (isset($_COOKIE['login']) && isset($_COOKIE['session_hash'])){
-    $login_from_cookie = $_COOKIE['login'];
+if (isset($_COOKIE['id']) && isset($_COOKIE['session_hash'])){
+    $id_from_cookie = $_COOKIE['id'];
     $session_hash_from_cookie = $_COOKIE['session_hash'];
-    $connection = mysqli_connect("us-cdbr-iron-east-04.cleardb.net", "baee442aa8b79c", "f33121f7", "heroku_f76f1b2818ac133", "3306");
-    $log_out = "UPDATE `users` SET session_hash = null WHERE login = '" . $login_from_cookie . "'";
+    include "db.php";
+    $log_out = "UPDATE `users` SET session_hash = null WHERE id = '" . $id_from_cookie . "'";
 
     if ($result = mysqli_query($connection, $log_out)) {
         if (mysqli_num_rows($result) == 1) {
-            unset($_COOKIE['login']);
+            unset($_COOKIE['id']);
             unset($_COOKIE['session_hash']);
-            setcookie("login", null, 1);
+            setcookie("id", null, 1);
             setcookie("session_hash", null, 1);
             redirect('/');
         } else {
