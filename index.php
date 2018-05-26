@@ -33,6 +33,7 @@ include 'check_current_session.php';
     <div class="contentText">
         <H1>Изучай English с нами</H1>
         <h1>Быстро, весело, занимательно!</h1>
+
     </div>
 
     <div class = "icons">
@@ -42,7 +43,6 @@ include 'check_current_session.php';
 
     </div>
     <div class = "devis">
-
 
         <ul>
             <li>Учись</li>
@@ -111,5 +111,8 @@ include 'check_current_session.php';
     <script type="text/javascript" src="js/sign_in.js"></script>
     <script type="text/javascript" src="js/sign_up.js"></script>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+    <footer><?php include "copyright.php"; ?></footer>
+
     </body>
 </html>
