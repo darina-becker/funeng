@@ -20,7 +20,7 @@
                     echo "<li><a href='#'>" . $user . "</a></li>";
                 }?>
                 <li><a href="/content/read/start.php">Read</a></li>
-                <li><a href="/content/learn/vocabulary/test-i-have-a.php">Tests</a></li>
+                <li><a href="/content/tests/test-i-have-a.php">Tests</a></li>
                 <li><a href="/content/listen-and-watch/start.php">Listening</a></li>
                 <li><a href ="/logout.php"> Выход </a></li>
             </ul>
