@@ -19,6 +19,8 @@ include '../../check_session.php';
 </video>
 
 <?php include "../../to_homepage.php"; ?>
-<div class="cpr"><?php include "../../copyright.php"; ?></div>
+<?php
+include( $_SERVER['DOCUMENT_ROOT'].'/footer.php');
+?>
 </body>
 </html>

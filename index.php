@@ -115,7 +115,6 @@ include 'check_current_session.php';
     <script type="text/javascript" src="js/sign_up.js"></script>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 
-    <footer><?php include "copyright.php"; ?></footer>
 
     </body>
 </html>

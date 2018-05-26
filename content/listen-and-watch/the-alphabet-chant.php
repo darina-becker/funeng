@@ -19,6 +19,9 @@ include '../../check_session.php';
     <source src="video/the_alphabet_chant.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 </video>
 <?php include "../../to_homepage.php"; ?>
-<div class="cpr"><?php include "../../copyright.php"; ?></div>
+
+<?php
+include( $_SERVER['DOCUMENT_ROOT'].'/footer.php');
+?>
 </body>
 </html>

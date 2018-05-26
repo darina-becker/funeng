@@ -1,1 +1,0 @@
-&copy; Copyright <?php echo date('Y'); ?> Д.Бухарина, О.Аверкина

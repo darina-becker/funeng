@@ -9,6 +9,6 @@
 
 <div>
     <footer>
-        <p>Copyright 2018 ibks</p>
+        <p>&copy; Copyright <?php echo date('Y'); ?> ibks</p>
     </footer>
 </div>

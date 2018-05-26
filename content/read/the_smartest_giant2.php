@@ -19,8 +19,8 @@ include '../../check_session.php';
 <p class="text">Смотреть и слушать:</p>
 <iframe width="660" height="415" src="https://www.youtube.com/embed/cfiPrA8E3qE?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <?php include "../../to_homepage.php"; ?>
-
-<div class="cpr"><?php include "../../copyright.php"; ?></div>
-
+<?php
+include( $_SERVER['DOCUMENT_ROOT'].'/footer.php');
+?>
 </body>
 </html>

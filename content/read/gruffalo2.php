@@ -20,6 +20,8 @@ include '../../check_session.php';
 <iframe width="660" height="415"  src="https://www.youtube.com/embed/ThZqDoJi5S0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <?php include "../../to_homepage.php"; ?>
 
-<div class="cpr"><?php include "../../copyright.php"; ?></div>
+<?php
+include( $_SERVER['DOCUMENT_ROOT'].'/footer.php');
+?>
 </body>
 </html>

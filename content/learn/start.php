@@ -13,7 +13,9 @@
 <h3>����������</h3>
 <h3>�������</h3>
 <?php include "../../to_homepage.php"; ?>
-<footer><?php include "../../copyright.php"; ?></footer>
 
+<?php
+include( $_SERVER['DOCUMENT_ROOT'].'/footer.php');
+?>
 </body>
 </html>
