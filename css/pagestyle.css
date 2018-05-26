@@ -1,5 +1,7 @@
 title{
+
     font-family: 'Caveat', cursive;
+
 }
 html, body {
     font-family: sans-serif;
@@ -11,6 +13,18 @@ html, body {
     -webkit-font-smoothing: antialiased;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #009966;
+    font-family: 'Caveat', cursive;
+
+}
+
 p {
     -webkit-margin-after: 0px;
     -webkit-margin-before: 0px;
@@ -20,31 +34,17 @@ p {
     margin-bottom: 4px;
 }
 
+.w600px {
+    max-width: 600px;
+}
+
 a {
     font-size: 15px;
     color: #b80303;
     padding-bottom: 2px;
     text-decoration: underline;
 }
-.btn {
-    display: inline-block;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    margin-top: 10px;
-    font-size: 14px;
-    color: #7F828B;
-    border: 1px solid #7F828B;
-}
 
-.btn-active {
-    margin-top: 35px !important;
-    background: #d10303;
-    color: #009966 !important;
-    font-size: 17px;
-    font-weight: 500;
-    border: none;
-}
 .readListen {
     display: inline-block;
     box-sizing: inherit;
@@ -67,6 +67,8 @@ a {
     font-family: 'Caveat', cursive;
     padding: 5px 5px;
     margin-left: 10%;
+
+
 }
 
 .readListen:hover {
@@ -75,7 +77,6 @@ a {
     border-radius:40px ;
 
 }
-
 .text{
     font-size: 20px;
 }
@@ -89,3 +90,4 @@ img.animate1:hover {
     filter: alpha (Opacity=100);
     opacity: 1;
 }
+
