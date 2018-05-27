@@ -102,12 +102,19 @@ footer {
 }
 .gohome {
     position: fixed;
-    left: 0;
+    left: 46%;
     bottom: 25;
-    width: 100%;
-    background-color: #009966;
-    color: white;
     text-align: center;
+}
+/*for test=----------------------------------*/
+.wrapper{
+    width: 600px;
+    height: 130px;
+    margin: 0 auto;
+   /* display: none;*/
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
 }
 
 /*------------------------------------------------------------*/
@@ -233,6 +240,7 @@ nav div ul li{
     margin: 0 auto;
     padding: 0;
     margin-top: 110px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -258,4 +266,10 @@ nav div ul li{
     padding-left: 10%;
     list-style: none;
     padding-top: 13%;
+}
+
+/*------------------------------------------------*/
+.testbtn
+{
+    border-radius: 30px;
 }

@@ -1,3 +1,3 @@
 <div class="gohome">
-<a href="../../main.php"> <img class="animate1" src="../../img/house.png" alt="" height="50"/> </a>
+<a href="../../main.php"> <img src="../../img/house3.png" alt="" height="50"/> </a>
 </div>

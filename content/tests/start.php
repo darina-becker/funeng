@@ -17,6 +17,7 @@ include ($_SERVER["DOCUMENT_ROOT"].'/navbar2.php');
 
 <div class = contentText>
     <h1>Тесты</h1>
+    <?php include "test-pattern.php"?>
 </div>
 <?php include "../../to_homepage.php"; ?>
 <?php

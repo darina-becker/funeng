@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?> 
+<test> 
+	<caption>
+		I Have a Pet
+	</caption>
+	<countQuests>3</countQuests>
+		<quest>
+			<title>I have a dog</title>
+			<answ><image>img/i-have-a-dog.png</image></answ>
+			<answ><image>img/i-have-a-bee.png</image></answ>
+			<answ><image>img/i-have-a-turtle.png</image></answ>
+			<ransw>1</ransw>
+		</quest>
+		<quest>
+			<title>I have a cat</title>
+			<answ><image>img/i-have-a-duck.png</image></answ>
+			<answ><image>img/i-have-a-rabbit.png</image></answ>
+			<answ><image>img/i-have-a-cat.png</image></answ>
+			<ransw>3</ransw>
+		</quest>
+		<quest>
+			<title>I have a bird</title>
+			<answ><image>img/i-have-a-bird.png</image></answ>
+			<answ><image>img/i-have-a-snail.png</image></answ>
+			<answ><image>img/i-have-a-fish.png</image></answ>
+			<ransw>1</ransw>
+		</quest>
+</test>
