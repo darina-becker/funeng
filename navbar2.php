@@ -15,9 +15,23 @@
         </div>
         <div>
             <ul>
-                <?php if(isset($_COOKIE["login"])){
-                    $user = $_COOKIE["login"];
-                    echo "<li><a href='#'>" . $user . "</a></li>";
+                <?php
+                include "db.php";
+
+
+                if(isset($_COOKIE["id"])){
+
+                    $id_from_cookie = $_COOKIE["id"];
+                    $login_from_bd = "SELECT login FROM `users` WHERE id = '" . $id_from_cookie . "'";
+                if ($result = mysqli_query($connection, $login_from_bd)) {
+                if (mysqli_num_rows($result) == 1) {
+                    $row = mysqli_fetch_assoc($result);
+                    $login = $row["login"];
+                    echo "<li><a href='#'>" . $login . "</a></li>";
+                    }
+                }
+
+
                 }?>
                 <li><a href="/content/read/start.php">Read</a></li>
                 <li><a href="/content/tests/start.php">Tests</a></li>

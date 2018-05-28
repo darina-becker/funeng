@@ -82,12 +82,12 @@ a {
 }
 
 img.animate1 {
-    filter: alpha (Opacity=50);
+    filter: alpha(Opacity=50);
     opacity: 0.50;
 }
 
 img.animate1:hover {
-    filter: alpha (Opacity=100);
+    filter: alpha(Opacity=100);
     opacity: 1;
 }
 

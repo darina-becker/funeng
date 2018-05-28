@@ -4,14 +4,9 @@ include 'check_current_session.php';
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" >
-        <title>funnyEnglish</title>
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/registration.css">
-        <link rel="stylesheet" href="css/signin.css">
-        <link href="https://fonts.googleapis.com/css?family=Bad+Script|Caveat|Indie+Flower|Lobster|Marck+Script&amp;subset=cyrillic" rel="stylesheet">
-    </head>
+<?php
+include ($_SERVER['DOCUMENT_ROOT'].'/header.php');
+?>
     <body>
 
     <div>
@@ -108,7 +103,7 @@ include 'check_current_session.php';
     </div>
 
     <?php
-        include 'footer.php';
+        include ($_SERVER['DOCUMENT_ROOT'].'/footer.php');
     ?>
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/sign_in.js"></script>
