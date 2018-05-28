@@ -9,6 +9,6 @@
 
 <div>
     <footer>
-        <p>&copy; Copyright <?php echo date('Y'); ?> ibks</p>
+        <span>&copy; Copyright <?php echo date('Y'); ?> ibks</span>
     </footer>
 </div>

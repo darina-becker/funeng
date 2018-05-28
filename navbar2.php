@@ -33,7 +33,7 @@
 
 
                 }?>
-                <li><a href="/content/read/start.php">Read</a></li>
+                <li><a href="/content/read/start.php">Watch and read</a></li>
                 <li><a href="/content/tests/start.php">Tests</a></li>
                 <li><a href="/content/learn/start.php">Learn</a></li>
                 <li><a href="/content/listen-and-watch/start.php">Watch and listen</a></li>
