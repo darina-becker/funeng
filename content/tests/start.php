@@ -16,8 +16,32 @@ include ($_SERVER["DOCUMENT_ROOT"].'/navbar2.php');
 ?>
 
 <div class = contentText>
-    <h1>Тесты</h1>
-    <?php include "test-pattern.php"?>
+
+        <table>
+            <colgroup>
+                <col>
+                <col style="width: 500;">
+            </colgroup>
+            <caption><h1>Тесты </h1></caption>
+            <tr>
+                <td><img src="img/i-have-a-pet.png" alt="" height="180" /></td>
+                <td style="background-color: #009966">
+                    <h2>I have a pet</h2>
+                    <p class="text"> Как будет по английски кот? А хомяк? Проверь свои знания</p>
+                    <p><a href="test-i-have-a-pet.php" class="readListen">Пройти</a></p>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <h2>Ещё какой-нибудь тест</h2>
+                    <p class="text">Описание</p>
+                    <p><a href="gruffalo2.php" class="readListen">Ссылка</a></p>
+                </td>
+            </tr>
+
+        </table>
+
 </div>
 <?php include "../../to_homepage.php"; ?>
 <?php
