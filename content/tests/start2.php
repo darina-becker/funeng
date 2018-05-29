@@ -20,7 +20,7 @@ include ($_SERVER["DOCUMENT_ROOT"].'/navbar2.php');
         <table>
             <colgroup>
                 <col>
-                <col style="width: 500;">
+                <col style="width: 500px;">
             </colgroup>
             <caption><h1>Тесты </h1></caption>
             <tr>
@@ -28,7 +28,7 @@ include ($_SERVER["DOCUMENT_ROOT"].'/navbar2.php');
                 <td style="background-color: #009966">
                     <h2>I have a pet</h2>
                     <p class="text"> Как будет по английски кот? А хомяк? Проверь свои знания</p>
-                    <p><a href="test-i-have-a-pet.php" class="readListen">Пройти</a></p>
+                    <p><a href="test.php" class="readListen">Пройти</a></p>
                 </td>
             </tr>
             <tr>

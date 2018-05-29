@@ -16,7 +16,11 @@ include ($_SERVER["DOCUMENT_ROOT"].'/navbar2.php');
 ?>
 
 <div class = contentText>
-    <?php include "test-pattern.php"?>
+    <?php
+    $file=$_GET['test'];
+    require_once('test-pattern.php');
+    build($file);
+    ?>
 </div>
 <?php include "../../to_homepage.php"; ?>
 <?php
