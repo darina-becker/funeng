@@ -13,23 +13,7 @@ include '../../check_session.php';
 
 <?php
 include ($_SERVER["DOCUMENT_ROOT"].'/navbar2.php');
-/*$dir = 'xml/';
-$array = scandir($dir);
-$length = count($array);
-
-if ($length > 2) {
-    for ($i=2; i < $length; $i++) {
-        echo '<tr>';
-             echo   '<td><img src="img/' . mb_substr($i,0, -4) . '.png" alt="" height="180" /></td>';
-                 echo '<td style="background-color: #009966">';
-                   echo '<h2>' . mb_substr($i, 0, -4) . '</h2>';
-                    //<p class="text"> Как будет по английски кот? А хомяк? Проверь свои знания</p>
-                    echo '<p><a href="test-pattern.php?"'. $i .  'class="readListen">Пройти</a></p>';
-               echo '</td>';
-            echo '</tr>';
-    }
-}
-*/?>
+?>
 
 
 <div class = contentText>
@@ -41,7 +25,6 @@ if ($length > 2) {
             </colgroup>
             <caption><h1>Тесты </h1></caption>
             <?php
-//            include ($_SERVER["DOCUMENT_ROOT"].'/navbar2.php');
             $dir = 'xml/';
             $array = scandir($dir);
             $length = count($array);
@@ -51,7 +34,7 @@ if ($length > 2) {
                     echo '<tr>';
                     echo   '<td><img src="img/' . mb_substr($array[$i],0, -4) . '.png" alt="" height="180" /></td>';
                     echo '<td style="background-color: #009966">';
-                    echo '<h2>' . mb_substr($i, 0, -4) . '</h2>';
+                    echo '<h2>' . str_replace("-", " ", mb_substr($array[$i], 0, -4)) . '</h2>';
                     //<p class="text"> Как будет по английски кот? А хомяк? Проверь свои знания</p>
                     echo '<p><a href="test.php?test=' . mb_substr($array[$i], 0, -4) .  '" class="readListen">Пройти</a></p>';
                     echo '</td>';
