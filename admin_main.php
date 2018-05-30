@@ -1,4 +1,11 @@
 
+<?php
+session_start();
+// $_SESSION['ua'] = 'hgugjh';
+if ($_SESSION['ua'] != $_SERVER['HTTP_USER_AGENT']) {
+    die('Wrong browser');
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +26,7 @@
                 <li><a href ="#" class="btn-upload-test"> Залить тесты</a></li>
                 <li><a href ="#" > Залить видео </a></li>
                 <li><a href ="#" > Ссылки на видео </a></li>
-                <li><a href ="#" > Выход </a></li>
+                <li><a href ="admin_logout.php" > Выход </a></li>
             </ul>
         </div>
     </nav>

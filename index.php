@@ -1,5 +1,5 @@
 <?php
-include 'check_current_session.php';
+//include 'check_current_session.php';
 ?>
 
 <!DOCTYPE html>

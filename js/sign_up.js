@@ -5,14 +5,6 @@ function sign_up() {
     var re_enter = $('#reenterpass').val();
     var msg = '';
 
-   /* if ((login == '')|| (email == '') || (pswd =='') || (re_enter == '') )
-    {
-        console.log("Заполните, пожалуйста, все поля!");
-
-    }
-
-    login =
-*/
 
     if (pswd == re_enter) {
 

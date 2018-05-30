@@ -39,8 +39,28 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
         $session_hash = generateRandomString(64);
         $add_session_hash = "update `admins` SET session_hash='" . $session_hash . "' where id='" . $id . "'";
         if($result = mysqli_query($connection, $add_session_hash)) {
-            setcookie("id", $id, time() + 60*60*24); //todo replace login by id
+            /*setcookie("id", $id, time() + 60*60*24); //todo replace login by id
             setcookie("session_hash", $session_hash, time() + 60*60*24);
+            */
+           /* session_start();
+            if (!isset($_SESSION['count'])) {
+                $_SESSION['count'] = 0;
+            } else {
+                $_SESSION['count']++;
+            }*/
+
+
+            session_start();
+
+            if (!isset($_SESSION['time'])) {
+                $_SESSION['ua'] = $_SERVER['HTTP_USER_AGENT'];
+                $_SESSION['time'] = date("H:i:s");
+
+            }
+
+
+
+                //echo $_SESSION['time'];
             echo "OK";
         }
         exit;
@@ -63,6 +83,3 @@ function generateRandomString($length)
     return $key;
 }
 //$alphabet = '0123456789abcdefghjklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXZY';
-
-
-
