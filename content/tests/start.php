@@ -15,7 +15,6 @@ include '../../check_session.php';
 include ($_SERVER["DOCUMENT_ROOT"].'/navbar2.php');
 ?>
 
-
 <div class = contentText>
 
         <table>

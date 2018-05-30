@@ -34,8 +34,10 @@ function build($file)
             echo "</div>";
         }
     }
+    echo "<br><p class=\"readListen\"><a href=\"javascript:location.reload(true)\">Ещё раз</a></p>";
 }
 ?>
+
 
 <!---Скрипт проверки теста-->
 <script type="text/javascript">

@@ -55,10 +55,11 @@ if(isset($_POST["username"]) && isset($_POST["password"])){
             if (!isset($_SESSION['time'])) {
                 $_SESSION['ua'] = $_SERVER['HTTP_USER_AGENT'];
                 $_SESSION['time'] = date("H:i:s");
-
+                $_SESSION['ra'] = $_SERVER['REMOTE_ADDR'];
+                if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+                    $_SESSION['xff'] = $_SERVER['HTTP_X_FORWARDED_FOR'];
+                }
             }
-
-
 
                 //echo $_SESSION['time'];
             echo "OK";

@@ -1,10 +1,6 @@
 
 <?php
-session_start();
-// $_SESSION['ua'] = 'hgugjh';
-if ($_SESSION['ua'] != $_SERVER['HTTP_USER_AGENT']) {
-    die('Wrong browser');
-}
+include 'check_admin_session.php';
 ?>
 <!DOCTYPE html>
 <html>
