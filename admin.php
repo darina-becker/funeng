@@ -1,4 +1,8 @@
-
+<?php
+    session_start();
+    $token=bin2hex(openssl_random_pseudo_bytes(128,$cstrong));
+    $_SESSION['security_token']=$token;
+?>
 <!DOCTYPE html>
 <html>
 <?php
@@ -29,7 +33,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/header.php');
         </div>
         <div>
             <form id="signInForm" action="" method="post">
-
+                <input type="hidden" id="tokenAdmSignIn" value="<?php echo $token;?>">
                 <label for="login_field">Username</label>
                 <input id="login_field" class="input-field" name="login" type="text" placeholder="Enter Username">
                 <label for="password_field">

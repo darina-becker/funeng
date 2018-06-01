@@ -5,72 +5,77 @@
  * Date: 07.05.2018
  * Time: 2:32
  */
+session_start();
+if(isset($_POST['token']) && isset($_SESSION['security_token'])) {
 
-if(isset($_POST["username"]) && isset($_POST["password"])){
-    $login = $_POST['username'];
-    $password = $_POST['password'];
+    if ($_SESSION['security_token'] == $_POST['token']) {
 
-    $id = null;
-    $hash = "";
+        if (isset($_POST["username"]) && isset($_POST["password"])) {
+            $login = $_POST['username'];
+            $password = $_POST['password'];
 
-    if(!preg_match("/^[a-zA-Z0-9]+$/", $login)) {
-        echo "access deny 4";
-        exit;
-    }
+            $id = null;
+            $hash = "";
 
-    include "db.php";
-    $login_query = "SELECT id, hash_pswd FROM `admins` WHERE login = '" . $login . "'";
-
-    if ($result = mysqli_query($connection, $login_query)) {
-        if (mysqli_num_rows($result) == 1) {
-            $row = mysqli_fetch_assoc($result);
-            $hash = $row["hash_pswd"];
-            $id = $row["id"];
-        } else {
-            echo  "access deny1!";
-//            todo wrong login
-            exit;
-        }
-        mysqli_free_result($result);
-    } else {
-        echo "access deny 2!";
-    }
-    if (password_verify($password, $hash)) {
-        $session_hash = generateRandomString(64);
-        $add_session_hash = "update `admins` SET session_hash='" . $session_hash . "' where id='" . $id . "'";
-        if($result = mysqli_query($connection, $add_session_hash)) {
-            /*setcookie("id", $id, time() + 60*60*24); //todo replace login by id
-            setcookie("session_hash", $session_hash, time() + 60*60*24);
-            */
-           /* session_start();
-            if (!isset($_SESSION['count'])) {
-                $_SESSION['count'] = 0;
-            } else {
-                $_SESSION['count']++;
-            }*/
-
-
-            session_start();
-
-            if (!isset($_SESSION['time'])) {
-                $_SESSION['ua'] = $_SERVER['HTTP_USER_AGENT'];
-                $_SESSION['time'] = date("H:i:s");
-                $_SESSION['ra'] = $_SERVER['REMOTE_ADDR'];
-                if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-                    $_SESSION['xff'] = $_SERVER['HTTP_X_FORWARDED_FOR'];
-                }
+            if (!preg_match("/^[a-zA-Z0-9]+$/", $login)) {
+                echo "access deny 4";
+                exit;
             }
 
-                //echo $_SESSION['time'];
-            echo "OK";
+            include "db.php";
+            $login_query = "SELECT id, hash_pswd FROM `admins` WHERE login = '" . $login . "'";
+
+            if ($result = mysqli_query($connection, $login_query)) {
+                if (mysqli_num_rows($result) == 1) {
+                    $row = mysqli_fetch_assoc($result);
+                    $hash = $row["hash_pswd"];
+                    $id = $row["id"];
+                } else {
+                    echo "access deny1!";
+//            todo wrong login
+                    exit;
+                }
+                mysqli_free_result($result);
+            } else {
+                echo "access deny 2!";
+            }
+            if (password_verify($password, $hash)) {
+                $session_hash = generateRandomString(64);
+                $add_session_hash = "update `admins` SET session_hash='" . $session_hash . "' where id='" . $id . "'";
+                if ($result = mysqli_query($connection, $add_session_hash)) {
+                    /*setcookie("id", $id, time() + 60*60*24); //todo replace login by id
+                    setcookie("session_hash", $session_hash, time() + 60*60*24);
+                    */
+                    /* session_start();
+                     if (!isset($_SESSION['count'])) {
+                         $_SESSION['count'] = 0;
+                     } else {
+                         $_SESSION['count']++;
+                     }*/
+
+
+//                    session_start();
+
+                    if (!isset($_SESSION['time'])) {
+                        $_SESSION['ua'] = $_SERVER['HTTP_USER_AGENT'];
+                        $_SESSION['time'] = date("H:i:s");
+                        $_SESSION['ra'] = $_SERVER['REMOTE_ADDR'];
+                        if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+                            $_SESSION['xff'] = $_SERVER['HTTP_X_FORWARDED_FOR'];
+                        }
+                    }
+
+                    //echo $_SESSION['time'];
+                    echo "OK";
+                }
+                exit;
+            } else {
+                echo "Wrong password 3!";
+                exit;
+            }
         }
-        exit;
-    } else {
-        echo "Wrong password 3!";
-        exit;
     }
 }
-
 
 function generateRandomString($length)
 {

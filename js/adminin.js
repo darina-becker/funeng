@@ -1,6 +1,7 @@
 function sign_in() {
     var login = $('#login_field').val();
     var pswd = $('#password_field').val();
+    var token = $('#tokenAdmSignIn').val();
     /*
         $.ajax({
             type: "POST",
@@ -11,7 +12,7 @@ function sign_in() {
                 alert(msg);
             }
         });*/
-    $.post('admin_signin.php', {username:login, password:pswd},
+    $.post('admin_signin.php', {username:login, password:pswd, token:token},
         function (result) {
             if (result == 'OK')
             {
