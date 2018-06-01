@@ -88,6 +88,19 @@ if(isset($_POST['token'])&&isset($_SESSION['security_token'])) {
         } else {
             $query = "INSERT INTO `users` (login, hash_pswd, email) VALUES ('" . $login . "','" . $hash . "','" . $email . "')";
             mysqli_query($connection, $query);
+
+            $newid=null;
+            $query2 = "SELECT id FROM users WHERE login='" . $login . "'";
+            if ($result = mysqli_query($connection, $query2)) {
+                if (mysqli_num_rows($result) == 1) {
+                    $row = mysqli_fetch_assoc($result);
+                    $newid = $row["id"];
+                }
+                mysqli_free_result($result);
+            }
+
+            $query3 = "INSERT INTO `pswd_error` (user_id) VALUES (". $newid .")";
+            mysqli_query($connection, $query3);
             echo "OK";
             exit;
 

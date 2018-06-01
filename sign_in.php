@@ -19,7 +19,7 @@ if(isset($_POST['token']) && isset($_SESSION['security_token'])) {
             $hash = "";
 
             $bad_login_limit = 3;
-            $lockout_time = 20;
+            $lockout_time = 60;
             $first_bad_auth_timestamp = null;
             $count_login_failed = null;
 
