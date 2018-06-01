@@ -3,6 +3,7 @@ function sign_up() {
     var email = $('#email_signUp').val();
     var pswd = $('#pass_signUp').val();
     var re_enter = $('#reenterpass').val();
+    var token = $('#tokenSignUp').val();
     var msg = '';
 
 
@@ -11,7 +12,7 @@ function sign_up() {
 
         //проверка на пустоту
         //удаление пробелов
-        $.post('sign_up.php', {username: login, password: pswd, email:email},
+        $.post('sign_up.php', {username: login, password: pswd, email:email, token:token},
             function (result) {
 
 

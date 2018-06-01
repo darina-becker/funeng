@@ -1,5 +1,8 @@
 <?php
 //include 'check_current_session.php';
+    session_start();
+    $token=bin2hex(openssl_random_pseudo_bytes(128,$cstrong));
+    $_SESSION['security_token']=$token;
 ?>
 
 <!DOCTYPE html>
@@ -58,7 +61,7 @@ include ($_SERVER['DOCUMENT_ROOT'].'/header.php');
             </div>
             <div>
                 <form id="signInForm" action="" method="post">
-
+                    <input type="hidden" id="tokenSignIn" value="<?php echo $token;?>">
                     <label for="login_field">Username</label>
                     <input id="login_field" class="input-field" name="login" type="text" placeholder="Enter Username">
                     <label for="password_field">
@@ -67,7 +70,7 @@ include ($_SERVER['DOCUMENT_ROOT'].'/header.php');
                     </label>
                     <input id="password_field" class="input-field" name="password" type="password" placeholder="Enter Password" autocomplete="off">
                     <input name="commit" onclick="sign_in()" class="btn-block" value="Sign in" data-disable-with="Singing in..." type="button">
-            </form>
+               </form>
             </div>
         </div>
     </div>
@@ -81,6 +84,7 @@ include ($_SERVER['DOCUMENT_ROOT'].'/header.php');
             </div>
             <div>
                 <form id="signUpForm" action="" method="post">
+                    <input type="hidden" id="tokenSignUp" value="<?php echo $token;?>">
                     <label>Регистрация</label>
                     <label for="log_signUp">Login</label>
                     <input id="log_signUp" name="login" type="text" class="input-field">
@@ -90,7 +94,7 @@ include ($_SERVER['DOCUMENT_ROOT'].'/header.php');
 
 
                     <label for="pass_signUp"> Password </label>
-                    <input id="pass_signUp" name="pass" type="password" class="input-field"  >
+                    <input id="pass_signUp" name="pass" type="password" autocomplete="off" class="input-field"  >
 
                     <label for="reenterpass"> Repeat password</label>
                     <input id="reenterpass" name="repass" type="password" autocomplete="off" class="input-field" >
