@@ -116,7 +116,6 @@ if(isset($_POST['token']) && isset($_SESSION['security_token'])) {
 
 function generateRandomString($length)
 {
-
     $keys = array_merge(array_merge(range(0,9), range('a', 'z')),range('A','Z'));
 
     $key = "";
