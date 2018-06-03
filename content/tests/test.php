@@ -18,7 +18,7 @@ include ($_SERVER["DOCUMENT_ROOT"].'/navbar2.php');
 <div class = contentText>
     <?php
     $file=$_GET['test'];
-    require_once('test-pattern.php');
+    require_once($_SERVER["DOCUMENT_ROOT"].'/content/tests/test-pattern.php');
     build($file);
     ?>
 </div>
