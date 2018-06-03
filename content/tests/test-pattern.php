@@ -3,7 +3,7 @@
 function build($file)
 {
     /*загружаем файл (из бд)*/
-//$file=$_GET['test'];
+//    $file=$_GET['test'];
     $xml = simplexml_load_file($_SERVER["DOCUMENT_ROOT"]."/content/tests/xml/" . $file . ".xml");
 
     /*проверка на ошибки*/

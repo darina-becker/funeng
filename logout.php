@@ -25,7 +25,7 @@ if (isset($_COOKIE['id']) && isset($_COOKIE['session_hash'])){
     }
 
 } else {
-    redirect('/');
+    redirect($_SERVER['DOCUMENT_ROOT'].'/');
 }
 
 function redirect($url){
